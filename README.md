@@ -127,4 +127,5 @@ Developed by **Shanto Mia**
 
 ⭐ _If you find this project useful, consider giving it a star on GitHub!_
 
-Image Preview of the Deshboard: https://github.com/Shanto-442/Blinkit-Sales-Analysis-BI-Dashboard/blob/main/Image%20of%20Blinkit%20Sales%20Dashboard.png
+Preview of the Deshboard: 
+![Blinkit Dashboard Preview](https://github.com/Shanto-442/Blinkit-Sales-Analysis-BI-Dashboard/blob/main/Image%20of%20Blinkit%20Sales%20Dashboard.png)
