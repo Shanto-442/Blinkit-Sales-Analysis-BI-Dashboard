@@ -26,6 +26,56 @@ It enables stakeholders to monitor sales trends, outlet efficiency, and product 
   - Item Visibility
 
 ---
+## 🧮 Data Analysis Process
+
+### 1. **Data Collection**
+- The raw dataset was imported from Blinkit’s internal sales records containing:
+  - Outlet information (size, location, establishment year)  
+  - Product details (item type, fat content, visibility)  
+  - Performance metrics (sales, ratings, item count)
+
+### 2. **Data Cleaning & Transformation (Power Query)**
+- Handled **missing and null values** using conditional replacement.  
+- Standardized inconsistent outlet names and product types.  
+- Converted data types (e.g., text → numeric for sales values).  
+- Created new calculated columns for:
+  - `Average Sales = Total Sales / No. of Items`
+  - `Item Visibility Score`  
+  - Categorization of outlets (Tier 1, 2, 3)
+
+### 3. **Data Modeling**
+- Built **relationships** between datasets:
+  - Outlet Table ↔ Item Table  
+  - Sales Table ↔ Outlet Dimension  
+- Defined primary keys and lookup tables for efficient filtering.  
+- Applied **DAX measures** for:
+  - Total Sales (`SUM(Sales[SalesAmount])`)
+  - Average Rating (`AVERAGE(Rating)`)
+  - Average Sales (`DIVIDE(SUM(Sales[SalesAmount]), COUNT(Items[ItemID]))`)
+
+### 4. **Data Visualization (Dashboard Design)**
+- Created multiple **interactive visuals** in Power BI:
+  - **Cards** for KPIs (Total Sales, Avg Sales, No. of Items, Avg Rating)  
+  - **Line Chart** for outlet establishment trend  
+  - **Bar Chart** for item types  
+  - **Donut Charts** for outlet size and fat content  
+  - **Table Visual** for detailed performance metrics  
+- Applied **slicers** (filters) for Outlet Size, Location, and Item Type.  
+- Used consistent **color coding** (yellow, green, white) matching Blinkit’s brand identity.
+
+### 5. **Insights & Interpretation**
+- Identified high-performing outlets (Tier 3, Supermarket Type 1).  
+- Observed a strong correlation between outlet establishment year and revenue.  
+- Found customer preference trends for low-fat and snack items.  
+- Noted item visibility impact on sales consistency.
+
+### 6. **Dashboard Optimization**
+- Improved usability with:
+  - Tooltips for deeper insight on hover.  
+  - Clean layout for visual hierarchy.  
+  - Uniform formatting for KPIs and labels.  
+
+---
 
 ## 🧩 Interactive Filters
 Dynamic filters allow customized analysis by:
